@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        
+        }
+        /*.container{
+            text-align: center;
+            margin-top: 300px;}*/
+        
+        .btn{
+            padding: 10px;
+            font-size: 20px;
+            word-spacing: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background: none;
+            color: #ffffff;
+            border: 1px solid #3596db;
+            transition: 0.8s;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .btn:hover{
+            color: #3596db;
+            border: 1px solid rgb(0, 47, 255);
+        }
+        .btn::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            background: linear-gradient(180deg,rgb(248, 0, 0),rgb(81, 206, 9));
+            z-index: -1;
+            transition: 0.7s ;
+            left: 0%;
+            bottom: 0;
+            border-radius:  50% 50% 0% 0%;
+        }
+        
+        .btn::before{
+            height: 200%;
+        }
+        .btn:hover::before{
+            height: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">click here!</button>
+    </div>
+</body>
+</html>

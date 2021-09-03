@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
+        .container{
+           margin-top: 300px;
+           text-align: center;
+        }
+        .btn{
+            border: 0.1px solid #3498db;
+            background:none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform: uppercase;
+            word-spacing: 3px;
+            margin: 5px;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden; 
+        }
+        #btn-1,#btn-2{
+            color: #3498db;
+        }
+        #btn-3,#btn-4{
+            color: #fff;
+        }
+        #btn-1:hover,#btn-2:hover{
+            color: #fff;
+        }
+        #btn-3:hover,#btn-4:hover{
+            color: #3498db;
+        }
+        .btn::before{
+            content:"";
+            position:absolute;
+            left:0;
+            width: 100%;
+            height: 0%;
+            background-color:#3498db ;
+            z-index: -1;
+            transition: 0.8s;
+        }
+        #btn-1::before,#btn-3::before{
+            top: 0;
+            border-radius: 0 0 50% 50%;
+        }
+        #btn-2::before,#btn-4::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        #btn-3::before,#btn-4::before{
+            height: 200%;
+        }
+        #btn-1:hover::before,#btn-2:hover::before{
+            height: 200%;
+        }
+        #btn-3:hover::before,#btn-4:hover::before{
+            height: 00%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="btn-1">submit</button>
+        <button class="btn" id="btn-2">submit</button>
+        <button class="btn" id="btn-3">submit</button>
+        <button class="btn" id="btn-4">submit</button>
+    </div>
+</body>
+</html>
